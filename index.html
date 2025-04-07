@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fotografía</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: rgb(255, 216, 237);
+                font-family: Comic Sans MS, cursive;
+            }
+            #fondo1{
+                width: 100%;
+                height: 570px;
+                background-image: url(https://i.pinimg.com/736x/6a/56/49/6a5649d57f77065a0307196962efe6b3.jpg);
+                background-attachment: fixed;
+            }
+            .titulo-principal{
+                color: rgb(149, 27, 78);
+                font-size: 3em;
+                
+                text-align: center;
+                padding-top: 40px;
+            }
+            #parrafo-intro{
+                font-family: Arial Narrow;
+                text-align: center;
+            }
+            a:link{
+                color: rgb(235, 45, 124);
+            }
+            a:visited{
+                color: rgb(46, 182, 184);
+            }
+            a:hover{
+                color: rgb(255, 198, 148);
+            }
+            nav{
+                background-color: rgb(255, 241, 230);
+                color: rgb(255, 198, 148);
+            }
+            #menu{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .nav-item{
+                float: left;
+            }
+            .nav-item a{
+                display: block;
+                padding: 7px;
+                color: rgb(255, 198, 148);
+                height: 130px;
+                width: 100%;
+            }
+            h1{
+                color: rgb(190, 31, 97);
+                text-shadow: white 2px 2px 5px;
+            }
+            #parrafito{
+                width: 500px;
+                padding: 20px;
+                margin: 10px;
+                background-color: rgb(255, 216, 237);
+            }
+            #imagen{
+                margin-left: 200px;
+            }
+            h2{
+                color: rgb(66, 173, 119);
+            }
+            #fondo2{
+                background-color: rgb(216, 247, 255);
+            }
+            div{
+                display: inline-block;
+            }
+            .puntos{
+                width: 500px;
+                padding: 10px 30px;
+            }
+            #mas-temas{
+                width: 500px;
+                padding: 20px;
+                position: absolute;
+                left: 550px;
+            }
+            #mas-temas #tabla-leyes{
+                color: rgb(149, 27, 78);
+            }
+            #mas-temas #tabla-iluminacion{
+                color: rgb(59, 128, 131);
+            }
+            .fondo3{
+                width: 100%;
+                background-image: url(https://img.freepik.com/foto-gratis/camara-tripode-fotografos-toman-vistas-panoramicas-fondo-montana_1150-61568.jpg?t=st=1743528235~exp=1743531835~hmac=b104f514bc3c311dd8c79344b8f65416461a165edd3eef72acc34907f25271cb&w=1380);
+                background-attachment: fixed;
+                
+            }
+            .izquierda{
+                letter-spacing: 1px;
+                margin: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                width: 600px;
+                text-align: left;
+            }
+            .derecha{
+                letter-spacing: 1px;
+                margin: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                width: 600px;
+                text-align: right;
+                margin-left: 45%;
+            }
+            .mediocorto-normal{
+                text-align: center;
+                text-shadow: rgb(241, 153, 190) 3px 3px 5px;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .medio-contrapicado{
+                text-align: center;
+                text-shadow: rgb(216, 247, 255) 3px 3px 5px;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .detalle-nadir{
+                text-align: center;
+                text-shadow: peachpuff 3px 3px 5px;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .americano-picado{
+                text-align: center;
+                text-shadow: rgb(241, 153, 190) 3px 3px 5px;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .general-cenital{
+                text-align: center;
+                text-shadow: rgb(216, 247, 255) 3px 3px 5px;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .fotos-ley-tercios{
+                text-align: center;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .fotos-iluminacion{
+                text-align: center;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .fotos-orientacion{
+                text-align: center;
+                width: 45%;
+                margin: 25px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .fotos-orientacion-horizontal{
+                text-align: center;
+                width: 95%;
+                margin: 25px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .foto-apropiacion{
+                text-align: center;
+                width:50%;
+                margin: 50px 25%;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .fotos-intervencion{
+                text-align: center;
+                width: 45%;
+                margin: 20px;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .serie-fotográfica{
+                text-align: justify;
+                width:50%;
+                margin: 20px 8%;
+                display: inline-block;
+                background-color: rgb(255, 216, 237);
+            }
+            .adicional{
+                font-size: small;
+                letter-spacing: 3px;
+            }
+            aside{
+                margin-left: 80%;
+                margin-bottom: 10px ;
+                padding: 10px;
+                background-color: peachpuff;
+            }
+            footer{
+                background-color: white;
+                height: 250px;
+                padding: 30px;
+            }
+            #datos{
+                font-family: monospace;
+                letter-spacing: 3px;
+                padding-top: 45px;
+            }
+            #logo{
+                position: absolute;
+                right: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fondo1">
+            <header>
+                <h1 class="titulo-principal">La Fotografía</h1>
+                <p id="parrafo-intro">La Fotografía también es un arte y una técnica para conseguir imágenes, aquí vamos a ver un poco sobre ella.</p>
+            </header>
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+                    <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toogle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav" id="menu">
+                            <li class="nav-item"><a class="nav-link" href="#fondo2">¿Qué puntos se van a tocar?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#mas-temas">Otros temas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#planos-angulos">Planos y Ángulos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#leyes-composicion">Leyes de Composición</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#iluminacion">Iluminación</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#orientacion">Orientación del Encuadre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#apropiacion">Apropiación</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#intervension">Intervensión Fotográfica</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#serie">Serie Fotográfica</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="parrafito">
+                <p>Durante el aula de Educación Artística estuvimos en cada chat tomando fotos. Lo disfruté mucho, es genial aprender todo ésto y que empieces a hacer, espero te gusten mis fotos. También estará la entrega final, la cual es una seción de fotos con todo lo aprendido.</p>
+            </div>
+            <img id= "imagen" src="https://i.pinimg.com/736x/ea/f4/d4/eaf4d466f10ed63952c95dc8ba5d07e2.jpg" width="230">
+        </div>
+
+        <article id="fondo2">
+            <div class="puntos">
+                <h2>¿Qué puntos se van a tocar?</h2>
+                <ol>
+                    <li><a target="_blank" href="https://youtu.be/PwYz69LEPnE">Planos Fotográficos</a></li>
+                    <ul>
+                        <li><a href=".general-cenital">P. General</a></li>
+                        <li><a href=".americano-picado">P. Americano</a></li>
+                        <li><a href=".medio-contrapicado">P. Medio</a></li>
+                        <li><a href=".mediocorto-ngnormal">P. Medio Corto</a></li>
+                        <li>Primer plano</li>
+                        <li>Primerísimo primer plano</li>
+                        <li><a href=".detalle-nadir">P. Detalle</a></li>
+                    </ul>
+                    <li><a target="_blank" href="https://youtu.be/PwYz69LEPnE">Ángulos</a></li>
+                    <ul>
+                        <li>Cenital</li>
+                        <li>Picado</li>
+                        <li>Normal</li>
+                        <li>Contrapicado</li>
+                        <li>Nadir</li>
+                    </ul>
+                </ol>
+            </div>
+            <div id="mas-temas">
+                <h3>Otros temas: </h3>
+                    <table>
+                        <tr>
+                            <th id="tabla-leyes">Leyes de la Composición</th>
+                            <th id="tabla-iluminacion">Iluminación</th>
+                        </tr>
+                        <tr>
+                            <td>Ley de la Mirada</td>
+                            <td>Iluminación Artificial</td>
+                        </tr>
+                        <tr>
+                            <td>Ley de Horizonte</td>
+                            <td>Iluminación Natural</td>
+                        </tr>
+                        <tr>
+                            <td>Ley de Tercios</td>
+                            <td>Luz de Ventana</td>
+                        </tr>
+                    </table>
+                </div>
+        </article>
+        
+        <section>
+            <div class="izquierda">
+                <h1 id="planos-angulos">Planos y Ángulos</h1>
+                <p>En una misma foto podemos apreciar un plano y un ángulo al mismo tiempo, ésto nos ayuda a transmitir mejor la idea y el enfoque que buscamos en nuestra foto. Aquí te dejo 5 ejemplos, éstas fotos que tomé fueron inspiradas en un libro:</p>
+            </div>
+            <div class="fondo3">
+                <section class="mediocorto-normal">
+                    <h4>Plano Medio Corto y Ángulo Normal:</h4>
+                    <p>En esta foto, por ejemplo, se capta la persona desde su pecho para arriba y el ángulo es de frente</p>
+                    <img src="img/1740158009081.jpg" width="230">
+                </section>
+                <section class="medio-contrapicado">
+                    <h4>Plano Medio y Ángulo Contrapicado:</h4>
+                    <p>En esta foto, por ejemplo, se capta la persona desde la cadera para arriba y el ángulo es desde abajo un poco</p>
+                    <img src="img/1740157982646.jpg" width="230">
+                </section>
+                <section class="detalle-nadir">
+                    <h4>Plano Detalle y Ángulo Nadir:</h4>
+                    <p>En esta foto, por ejemplo, se capta un detalle en específico y el ángulo es totalmente desde abajo</p>
+                    <img src="img/1740157947687.jpg" width="230">
+                </section>
+                <section class="americano-picado">
+                    <h4>Plano Americano y Ángulo Picado:</h4>
+                    <p>En esta foto, por ejemplo se capta la persona desde sus rodillas para arriba y el ángulo es desde arriba un poco</p>
+                    <img src="img/1740157992646.jpg" width="245">
+                </section>
+                <section class="general-cenital">
+                    <h4>Plano General y Ángulo Cenital</h4>
+                    <p>En esta foto, por ejemplo, se capta la persona de pies a cabeza y el ángulo es totalmente desde arriba</p>
+                    <img src="img/1740157963338.jpg" width="230">
+                </section>
+            </div>
+        </section>
+
+        <section>
+            <section class="derecha">
+                <h1 id="leyes-composicion">Leyes de Composición</h1>
+                <p>Una de ellas es la Ley de Tercios, en la cual utilizamos la cuadrícula e indicamos en las intersecciones del cuadro del centro en qué partes está situado el objeto o la persona. Aquí te dejo 3 ejemplos, éstas fotos las tomé en el chat #2 de Ed. Artística:</p>
+            </section>
+            <section class="fondo3">
+                <div class="fotos-ley-tercios">
+                    <p>Con cuadricula (al tomar la foto)</p>
+                    <img src="img/1740158095606.jpg" width="200">
+                </div>
+                <div class="fotos-ley-tercios">
+                    <p>Sin cuadricula (resultado)</p>
+                    <img src="img/1740158081890.jpg" width="200">   
+                </div>
+    
+                <div class="fotos-ley-tercios">
+                    <p>Con cuadricula (al tomar la foto)</p>
+                    <img src="img/1740158127835.jpg" width="200">
+                </div>
+                <div class="fotos-ley-tercios">
+                    <p>Sin cuadricula (resultado)</p>
+                    <img src="img/1740158117392.jpg" width="200">   
+                </div>
+    
+                <div class="fotos-ley-tercios">
+                    <p>Con cuadricula (al tomar la foto)</p>
+                    <img src="img/1740158308809.jpg" width="200">
+                </div>
+                <div class="fotos-ley-tercios">
+                    <p>Sin cuadricula (resultado)</p>
+                    <img src="img/1740158295490.jpg" width="200">   
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="izquierda">
+                <h1 id="iluminacion">Iluminación</h1>
+                <p>Es uno de los aspectos más importantes para que tu foto esté bien hecha, hay tres formas de luz que podemos usar. Aquí te dejo 3 ejemplos, éstas fotos las tomé en el chat #3 de Ed. Artística:</p>
+            </section>
+
+            <section class="fondo3">
+                <div class="fotos-iluminacion">
+                    <p>Con luz Artificial (linterna)</p>
+                    <img src="img/1740680824406.jpg" width="300">   
+                </div>
+    
+                <div class="fotos-iluminacion">
+                    <p>Con luz Natural (velas)</p>
+                    <img src="img/1740680587120.jpg" width="200">   
+                </div>
+    
+                <div class="fotos-iluminacion">
+                    <p>Con luz Artificial (linterna)</p>
+                    <img src="img/1740680598096.jpg" width="300">   
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="derecha">
+                <h1 id="orientacion">Orientación del Encuadre</h1>
+                <p>Es el formato en el que se toma la foto y son tres. Aquí te dejo 3 ejemplos, éstas fotos las tomé en el chat #4 de Ed. Artística, en el que hicimos un pequeño bodegón:</p>
+            </section>
+            <section class="fondo3">
+                <div class="fotos-orientacion">
+                    <p>Vertical</p>
+                    <img src="img/1741299721430.jpg" width="150">
+                </div>
+    
+                <div class="fotos-orientacion">
+                    <p>Inclinado</p>
+                    <img src="img/1741300262968.jpg" width="208">
+                </div>
+    
+                <div class="fotos-orientacion-horizontal">
+                    <p>Horizontal</p>
+                    <img src="img/1741298884406.jpg" width="500">
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="izquierda">
+                <h1 id="apropiacion">Apropiación</h1>
+                <p>Es una forma de recrear una obra, una escena, u otra imagen. Aquí te dejo un ejemplo, en el que apropiamos una imagen o escena de la película "Los Miserables", basada en la obra de Victor Hugo. Ésta foto la tomé en la semana #4 de Ed. Artística</p>
+            </section>
+            <section class="fondo3">
+                <div class="foto-apropiacion">
+                    <p>Mi apropiación/Escena original</p>
+                    <img src="img/apropiación-los-miserables.png" width="300">
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="derecha">
+                <h1 id="intervension">Intervensión Fotográfica</h1>
+                <p>Es una técnica mixta de la fotografía, en la que se pueden utilizar desde hilos hasta pintura y recortes. Aquí te dejo un ejemplo. ésta foto la encontré en pinterest y lo que hice fue que en el chat de Ed. Artística le apliqué ésta tecnica con hilos:</p>
+            </section>
+            <section class="fondo3">
+                <div class="fotos-intervencion">
+                    <p>Antes</p>
+                    <img src="img/1742497126392.jpg" width="300">
+                </div>
+    
+                <div class="fotos-intervencion">
+                    <p>Después</p>
+                    <img src="img/1742497126378.jpg" width="230">
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section class="izquierda">
+                <h1 id="serie">Serie Fotográfica</h1>
+                <p>Es un grupo de imágenes que están relacionadas entre sí, tienen el mismo concepto, por lo que son editadas y ambientadas de la misma forma. Ésta serie fotográfica la tomé en la última semana del curso de Ed. Artística y es la entrega final, en la que apliqué conceptos aprendidos:</p>
+                <p>Detrás de cámara:</p>
+                <img src="img/WIN_20250406_22_46_06_Pro.jpg" width="230">
+            </section>
+
+            <div class="serie-fotográfica">
+                <p>"Dulce emoción":</p>
+                <p>1. "Tranquilidad" / 2. "Esperanza" / 3. "Una mirada arriba"</p>
+                <img src="img/1743993866460.jpg" width="900">
+            </div>
+        </section>
+
+        <aside class="adicional">Tecnología(10°)
+            <br>Educación Artística(10°)
+            <br>Skolmi
+            <br>2025
+        </aside>
+        <footer class="adicional">
+            <div id="datos">
+                <p>Sara Manuela cortés Palomino.
+                    <br>cortes.saramanuela12@gmail.com
+                </p>
+            </div>
+            <div id="logo">
+                <img src="https://img.freepik.com/fotos-premium/2d-ilustracion-fotografo-camara-mujer-nina-mujer-dibujos-animados-estilo-plano-insignia-logotipo-simple-generativo-aixa_159242-27837.jpg" width="230">
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
